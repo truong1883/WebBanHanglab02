@@ -22,15 +22,8 @@
           <div class="p-4">
             <h5 class="card-title mb-3">Guest checkout</h5>
             <div class="row">
-              <div class="col-6 mb-3">
-                <p class="mb-0">First name</p>
-                <div class="form-outline">
-                  <input type="text" id="typeText" placeholder="Type here" class="form-control" />
-                </div>
-              </div>
-
               <div class="col-6">
-                <p class="mb-0">Last name</p>
+                <p class="mb-0">Full name</p>
                 <div class="form-outline">
                   <input type="text" asp-for="CustomerName" placeholder="EnterCustomer name" class="form-control" />
                  <span class="text-danger" asp-validation-for="CustomerName"></span>
@@ -71,7 +64,7 @@
           <h6 class="mb-3">Summary</h6>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Total price:</p>
-            <p class="mb-2">@string.Format("${0;#,###}",cart.Total)</p>
+            <p class="mb-2 fw-bold">@string.Format("${0:#,##0}", cart.Total)</p>
           </div>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Discount:</p>
@@ -84,7 +77,7 @@
           <hr />
           <div class="d-flex justify-content-between">
             <p class="mb-2">Total price:</p>
-            <p class="mb-2 fw-bold">@string.Format("${0;#,###}", cart.Total)</p>
+            <p class="mb-2 fw-bold">@string.Format("${0:#,##0}", cart.Total)</p>
           </div>
 
           <hr />

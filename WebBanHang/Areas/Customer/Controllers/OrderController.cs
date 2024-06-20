@@ -23,7 +23,7 @@ namespace WebBanHang.Areas.Customer.Controllers
                 cart = new Cart();
             }
             ViewBag.Cart = cart;
-            return View(cart);
+            return View();
         }
         public IActionResult ProcessOrder(Order order)
         {
